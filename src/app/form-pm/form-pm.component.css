@@ -1,0 +1,53 @@
+.form-check-input {
+    position: absolute; /* Position the checkboxes relatively to their container */
+    top: 5px; /* Adjust this value to control the vertical position */
+    left: 25px;
+}
+.journaliers{
+    size: 2cm;
+}
+.op{
+    position: relative; /* Position the checkboxes relatively to their container */
+    left: 25px;
+
+}
+.journaliers{
+    width: 100px;
+    position: relative;
+    left: 10px;
+}
+.mensuels{
+    width: 100px;
+    position: relative;
+    left: 50px;
+}
+.hebdomadaires{
+    width: 90px;
+    position: relative;
+    left: 40px;
+    
+}
+.hebdomadaire{
+    position: relative;
+    left: 25px;
+    
+}
+.aa{
+    width: 100cm;
+}
+.produits{
+    width: 90px;
+
+}
+.date{
+    width: 190px;
+
+}
+.oui{
+    position: absolute;
+    right: 65px;
+}
+.non{
+    position: absolute;
+    right: 10px;
+}
