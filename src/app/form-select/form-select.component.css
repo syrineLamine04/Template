@@ -1,0 +1,32 @@
+/* home.component.css */
+.container{
+    background-image: url('https://www.hydatis.com/wp-content/uploads/2020/05/img.png'); /* Chemin vers l'image de fond */
+
+}
+/* Pour centrer les boutons horizontalement */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacement entre les boutons */
+    top: 300px;
+  }
+  
+  /* Styles pour les boutons */
+  .button-container button {
+    font-size: 20px; /* Taille de la police */
+    padding: 30px 100px; /* Espacement intérieur du bouton */
+  background-size: cover; /* Ajuste la taille de l'image */
+  cursor: pointer;
+}
+.btn-transition {
+    background-color: #ff6900; /* Initial background color */
+    color: #ffffff; /* Initial text color */
+    border-color: #ff6900; /* Initial border color */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-transition:hover {
+    background-color: #ffffff; /* Background color on hover */
+    color: #ff6900; /* Text color on hover */
+    border-color: #ff6900; /* Border color on hover */
+}

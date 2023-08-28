@@ -1,7 +1,9 @@
 
 import {Component, OnInit} from '@angular/core';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
-
+import { DatePipe } from '@angular/common';
+import * as intlInput from 'intl-tel-input';
+ 
 @Component({
   selector: 'app-form-pm',
   templateUrl: './form-pm.component.html',
@@ -12,6 +14,7 @@ export class FormPMComponent implements OnInit {
 
 ajouterDate(event: MatDatepickerInputEvent<Date>) {
   this.selectedDate = event.value;}
+  produits :any[]=[];
   banques: any[] = []; 
   associes: any[] = []; 
   beneficiaires : any []=[];
@@ -29,7 +32,11 @@ ajouterDate(event: MatDatepickerInputEvent<Date>) {
     this.reponses[question] = reponse;
     this.selectedOptions[question] = reponse;
   }
-
+  ajouterProduit() {
+    this.produits.push({
+      nom: ''
+      
+    });}
   ajouterBanque() {
     this.banques.push({
       banque: '',
@@ -73,16 +80,26 @@ ajouterDate(event: MatDatepickerInputEvent<Date>) {
       capitalDetenue:'',})
     }
 
-  
+    currentYear : any;
 
-  constructor() {
+  constructor(private datePipe: DatePipe) {
     this.ajouterBanque();
     this.ajouterAssocie();
     this.ajouterBeneficiaire();
     this.ajouterFiliale();
+    this.currentYear = this.datePipe.transform(new Date(), 'yyyy');
+    this.ajouterProduit();
   }
 
-  ngOnInit() {
+  ngOnInit():void {
+    const inputElement = document.getElementById('phone');
+    if (inputElement){
+      intlInput(inputElement,{
+      initialCountry:'TN',
+      separateDialCode:true,
+      utilsScript:'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.0/js/utils.js '});
+
+    }
   }
 
 }

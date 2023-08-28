@@ -44,10 +44,50 @@
 
 }
 .oui{
-    position: absolute;
-    right: 65px;
+    position: relative;
+    left: 10px;
 }
 .non{
-    position: absolute;
-    right: 10px;
+    position: relative;
+    left: 10px;
+}
+.tag-input {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.tag-input input {
+    border: none;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.btn-transition {
+    background-color: #ff6900; /* Initial background color */
+    color: #ffffff; /* Initial text color */
+    border-color: #ff6900; /* Initial border color */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-transition:hover {
+    background-color: #ffffff; /* Background color on hover */
+    color: #ff6900; /* Text color on hover */
+    border-color: #ff6900; /* Border color on hover */
+}
+.custom-next-button {
+    background-color: #ff6900; /* Set the desired background color */
+    color: white; /* Set the text color to contrast with the background */
+    margin-right: 8px; /* Add spacing to the right for separation */
+    border-color: #ff6900;
+}
+
+.custom-previous-button {
+    background-color: #ffffff ; /* Set the background color to dark blue */
+    color: #ff6900 ; /* Set the text color to white */
+    margin-right: 8px; /* Add spacing to the right for separation */
+    border-color: #ff6900;
 }

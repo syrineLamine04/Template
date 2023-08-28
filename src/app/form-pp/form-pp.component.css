@@ -1,0 +1,70 @@
+.form-check-input {
+    position: absolute;
+    /* Position the checkboxes relatively to their container */
+    top: 5px;
+    /* Adjust this value to control the vertical position */
+    left: 25px;
+}
+
+.card-subtitle {
+    font-size: 1.2rem;
+    /* Adjust the font size as needed */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    /* Add some spacing below the label */
+    color: #333;
+    /* Set the desired text color */
+}
+
+.custom-next-button {
+    background-color: #ff6900;
+    /* Set the desired background color */
+    color: white;
+    /* Set the text color to contrast with the background */
+    border: none;
+    /* Remove the border */
+    margin-right: 8px;
+    /* Add spacing to the right for separation */
+}
+
+.custom-previous-button {
+    background-color: #ffffff !important;
+    /* Set the background color to dark blue */
+    color: #ff6900 !important;
+    /* Set the text color to white */
+    margin-right: 8px;
+    /* Add spacing to the right for separation */
+    border-color: #ff6900;
+}
+.btn-transition {
+    background-color: #ff6900; /* Initial background color */
+    color: #ffffff; /* Initial text color */
+    border-color: #ff6900; /* Initial border color */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-transition:hover {
+    background-color: #ffffff; /* Background color on hover */
+    color: #ff6900; /* Text color on hover */
+    border-color: #ff6900;
+}
+/* form-pp.component.css */
+.custom-delete-button {
+    background-color: red;
+    /* Customize the background color */
+    color: white;
+    /* Customize the text color */
+    border: none;
+    /* Remove border */
+    padding: 5px 10px;
+    /* Add padding */
+    border-radius: 4px;
+    /* Add border radius */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+}
+::ng-deep .mat-form-field-appearance-outline.specific-border .mat-form-field-outline  {
+    background-color: lightgray !important;
+    border-radius: 5px;  
+}
+  
