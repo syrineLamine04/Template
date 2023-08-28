@@ -15,11 +15,14 @@ import { FormSelectComponent } from './form-select/form-select.component';
 import { RouterModule, Routes } from '@angular/router';
 
 import { DatePipe } from '@angular/common';
+import { AngularSignaturePadModule } from '@almothafar/angular-signature-pad';
 
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatIconModule } from '@angular/material/icon';
+
+
 const routes: Routes = [
   { path: 'home',component:FormSelectComponent },
   { path: 'pm',component:FormPMComponent },
@@ -48,7 +51,8 @@ const routes: Routes = [
     MatCardModule,
     MatRadioModule,
     MatIconModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    AngularSignaturePadModule
   ],
   exports: [RouterModule],
   providers: [DatePipe],

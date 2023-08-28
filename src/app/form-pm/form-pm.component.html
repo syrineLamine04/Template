@@ -552,6 +552,64 @@
               <button mat-button matStepperNext  class="btn btn-warning custom-next-button">suivant</button>
             </div>
           </mat-step>
+          <mat-step >
+          <ng-template matStepLabel>Engagement</ng-template>
+              <p>
+                <mat-checkbox >
+                  Je certifie l’exactitude de l’information et l’authenticité des documents fournis
+                </mat-checkbox>
+              </p>
+              <div>
+                 <mat-form-field appearance="outline">
+                <mat-label>Nom et Prénom Agent de paiement</mat-label>
+                <input matInput placeholder="Nom et Prénom"  >
+              </mat-form-field>
+            </div>
+            
+              
+              <div class="row">
+                <div class="col-md-6">
+                  
+                    <div class="position-relative mb-3">
+                      <br><br><br><br><br>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Date</mat-label>
+                        <input matInput [matDatepicker]="datePicker" placeholder="Sélectionner une date" >
+                        <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+                        <mat-datepicker #datePicker></mat-datepicker>
+                      </mat-form-field>
+                      
+                    </div>
+                 </div>
+                 <div class="col-md-6">
+                  <div class="position-relative mb-3">
+                    <div class="btns" *ngIf="isDrawn">
+                      <button (click)="clear()">clear</button>
+                      <button (click)="undo()">undo</button>
+                      <button (click)="redo()">Redo</button>
+                      <button (click)="savePNG()">save as PNG</button>
+                
+                      
+                    </div>
+                    <signature-pad 
+                    #signature
+                    [options]="signaturePadOption"
+                    (drawStart)="drawStart($event)"
+                    (drawEnd)="drawComplete($event)"
+                    >
+        
+                    </signature-pad>
+                   </div></div>
+                
+                
+              </div>
+              <div>
+                <button mat-button matStepperPrevious class="btn btn-warning custom-previous-button">Précédent</button>
+                <button mat-raised-button class="btn btn-warning custom-next-button">Enregistrer</button>
+  
+              </div>
+            
+          </mat-step>
 
             
           </div>
